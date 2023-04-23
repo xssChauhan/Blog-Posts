@@ -1,6 +1,24 @@
 # TorchServe Tutorial
+- [TorchServe Tutorial](#torchserve-tutorial)
+  - [Goals](#goals)
+  - [Setup](#setup)
+    - [1. Clone this repo](#1-clone-this-repo)
+    - [2. Setup env and libararies](#2-setup-env-and-libararies)
+    - [3. Install `TorchServe`](#3-install-torchserve)
+    - [4. Download Transformers Model](#4-download-transformers-model)
+    - [5. Package the model for torchserve / Download prepackaged model](#5-package-the-model-for-torchserve--download-prepackaged-model)
+  - [Running and Inference](#running-and-inference)
+    - [Start Docker Container](#start-docker-container)
+    - [Running Inferences](#running-inferences)
+  - [Parallelism Benefits](#parallelism-benefits)
+    - [1 worker, 1 Request at a time](#1-worker-1-request-at-a-time)
+    - [More workers?](#more-workers)
+      - [2 Workers](#2-workers)
+      - [4 workers](#4-workers)
+  - [Conclusion](#conclusion)
 
-The aims of this tutorial are:
+## Goals
+The goals of this tutorial are:
 - Serve a model using `TorchServe` and `Docker`.
 - Explore `TorchServe`'s inbuilt parallelism and compare performance.
 - [ ] WIP: Add benchmarks for `TorchScript`. 
