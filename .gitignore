@@ -1,0 +1,4 @@
+torchserve/bert-base-uncased
+torchserve/model_store
+torchserve/logs/*
+.DS_Store
