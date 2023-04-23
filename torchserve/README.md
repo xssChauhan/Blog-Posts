@@ -3,7 +3,7 @@
   - [Goals](#goals)
   - [Setup](#setup)
     - [1. Clone this repo](#1-clone-this-repo)
-    - [2. Setup env and libararies](#2-setup-env-and-libararies)
+    - [2. Setup env and libraries](#2-setup-env-and-libraries)
     - [3. Install `TorchServe`](#3-install-torchserve)
     - [4. Download Transformers Model](#4-download-transformers-model)
     - [5. Package the model for torchserve / Download prepackaged model](#5-package-the-model-for-torchserve--download-prepackaged-model)
@@ -30,7 +30,7 @@ The goals of this tutorial are:
 $ git clone https://github.com/xssChauhan/Blog-Posts.git
 $ cd Blog-Posts/torchserve
 ```
-### 2. Setup env and libararies
+### 2. Setup env and libraries
 
 ```bash
 mamba create -n torchserve python=3.9 transformers=4.24.0
@@ -213,8 +213,8 @@ For 10 inferences:
 
 |           | Sequential | Parallel (n_requests=n_jobs) |
 |-----------|------------|------------------------------|
-| 1 Worker  | 37.771     | 38.201                       |
-| 2 Workers | 38.274     | 19.611                       |
-| 4 Workers | 38.449     | 12.030                       |
+| 1 Worker  | 37.771s     | 38.201s                       |
+| 2 Workers | 38.274s     | 19.611s                       |
+| 4 Workers | 38.449s    | 12.030s                       |
 
 Scaling up workers correcly can have upto `3.2x` speedups.
